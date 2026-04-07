@@ -10,7 +10,8 @@
         e.preventDefault();
 
         var link = $(this).attr('href');
-        link = link.replace("youversion://bible?reference", $deepLinkRoot);
+        link = link.replace("youversion://bible?reference", deepLinkRoot);
+        console.log(link);
         window.location.href = link;
     });  
 
