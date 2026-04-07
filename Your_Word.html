@@ -6,14 +6,15 @@
         deepLinkRoot = 'youversion://bible?reference';
     window.alert(deepLinkRoot);
 
-    $(document).on('click', 'a', function(e){
-        e.preventDefault();
 
-        var link = $(this).attr('href');
-        link = link.replace("youversion://bible?reference", deepLinkRoot);
-        console.log(link);
-        window.location.href = link;
-    });  
+    function testCodingWithYou() {
+        console.log("here You are ...");
+    }
+    testCodingWithYou();
+    function redirectToSite() {
+        window.location = deepLinkRoot + "gen.1";
+    }
+    redirectToSite();
 
 </script>
 
