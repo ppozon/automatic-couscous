@@ -3,7 +3,7 @@
     let deepLinkRoot = 'https://www.bible.com/bible/111/';
     found = window.navigator.userAgent.match(/iPhone/g);
     if (found != null)
-        deepLinkRoot = 'youversion://bible?reference';
+        deepLinkRoot = 'youversion://bible?reference=';
 
     function hereIam(chapterID) {
         window.location = deepLinkRoot + chapterID;
