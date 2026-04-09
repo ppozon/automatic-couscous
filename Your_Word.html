@@ -1357,14 +1357,20 @@
 </tbody></table></div>
 
 <script>
-    window.alert(isMobile);
-    if (isMobile)
+    if (isMobile) {   
+        // Increase the padding of the table header
+        for (let e of document.getElementsByClassName("s0")) {
+            e.style.padding = 50;
+        }
+
+        // Increase the font of the table text
         for (let i of [...Array(131).keys()]) {
             for (let e of document.getElementsByClassName("s" + i)) {
                 console.log(e.style);
                 e.style.fontSize=50;
             }
         }
+    }
 
 </script>
 
