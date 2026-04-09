@@ -13,7 +13,6 @@
 </script>
 
 <style type="text/css">
-body {margin: 0}
 .ritz .waffle a { color: inherit; }.ritz .waffle
 .s32{border-right:none;background-color:#134f5c;text-align:left;color:#ffffff;font-family:Arial;font-size:13pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle
 .s60{border-right:none;background-color:#a64d79;text-align:left;color:#ffffff;font-family:Arial;font-size:13pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle
@@ -1359,7 +1358,10 @@ body {margin: 0}
 </tbody></table></div>
 
 <script>
-    if (isMobile) {   
+    if (isMobile) {
+        document.getElementsByTagName("body")[0].style.marginLeft = 0;
+        document.getElementsByTagName("body")[0].style.marginRight = 0;
+
         // Increase the padding of the table header
         for (let e of document.getElementsByClassName("s0")) {
             e.style.padding = "10px 50px 10px 5px";
