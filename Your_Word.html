@@ -1,8 +1,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link type="text/css" rel="stylesheet" href="resources/sheet.css" >
 <script>
     let deepLinkRoot = 'https://www.bible.com/bible/111/';
-    found = window.navigator.userAgent.match(/iPhone/g);
-    if (found != null)
+    let isMobile = window.navigator.userAgent.match(/iPhone/g);
+    if (isMobile != null)
         deepLinkRoot = 'youversion://bible?reference=';
 
     function hereIam(chapterID) {
@@ -1355,13 +1355,14 @@
 </tbody></table></div>
 
 <script>
-    window.alert(found);
-    window.alert(deepLinkRoot);
-    for (let i of [...Array(130).keys()]) {
-        for (let e of document.getElementsByClassName("s" + i)) {
-            console.log(e.style);
-            e.style.fontSize=30;
+    window.alert(isMobile);
+    if (isMobile === true)
+        for (let i of [...Array(130).keys()]) {
+            for (let e of document.getElementsByClassName("s" + i)) {
+                console.log(e.style);
+                e.style.fontSize=30;
+            }
         }
-    }
+
 </script>
 
